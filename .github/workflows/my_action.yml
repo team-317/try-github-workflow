@@ -4,9 +4,12 @@ on:
       words:
         required: true
         type: string
-
 jobs:
-  publish-test-results:
+  a-test:
+    runs-on: ubuntu-latest
     steps:
-      -name: a run test
-      run: echo ${{ inputs.words }}
+    - run: echo ${{ inputs.words }}
+      shell: bash
+
+
+
