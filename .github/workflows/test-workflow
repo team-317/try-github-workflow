@@ -1,0 +1,8 @@
+name: publish-hybridse-test-result-from-fork
+
+jobs:
+    steps:
+      - name: Publish Linux UT Results
+        uses: ./.github/workflows/my-action.yml
+        with:
+          words: "zhe shi yi ge ce shi!"
