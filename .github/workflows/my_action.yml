@@ -1,0 +1,12 @@
+on:
+  workflow_call:
+    inputs:
+      words:
+        required: true
+        type: string
+
+jobs:
+  publish-test-results:
+    steps:
+      -name: a run test
+      run: echo ${{ inputs.words }}
