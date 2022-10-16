@@ -6,7 +6,6 @@ on:
         type: string
 jobs:
   a-test:
-    runs-on: ubuntu-latest
     steps:
     - run: echo ${{ inputs.words }}
       shell: bash
