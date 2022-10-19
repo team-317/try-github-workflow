@@ -6,10 +6,18 @@ jobs:
     a-test:
         runs-on: ubuntu-latest
         steps:
+            - name: get cwd
+              run: pwd
+              shell: bash
+
             - name: check out repository
               uses: actions/checkout@v3
+
+            - name: after checkout
+              run: pwd
+              shell: bash
               
             - name: test
-              uses: ./.github/workflows/my_action.yml
+              uses: ./.github/actions/my_action.yml
               with:
                 words: "zhe shi yi ge ce shi!"
