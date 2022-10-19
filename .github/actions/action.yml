@@ -9,6 +9,3 @@ jobs:
     steps:
     - run: echo ${{ inputs.words }}
       shell: bash
-
-
-
