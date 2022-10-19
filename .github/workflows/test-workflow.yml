@@ -15,6 +15,6 @@ jobs:
               uses: ./.github/actions
 
             - name: try again
-              uses: ./.github/actions/action.yml
+              uses: ./.github/actions/my_action.yml
               with:
                 words: "zhe shi yi ge ce shi!"
