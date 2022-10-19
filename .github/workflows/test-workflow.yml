@@ -1,4 +1,4 @@
-name: publish-hybridse-test-result-from-fork
+name: action test
 on:
     push:
         branches: [ main ]
@@ -6,16 +6,7 @@ jobs:
     a-test:
         runs-on: ubuntu-latest
         steps:
-
-
-            - name: check out repository
-              uses: actions/checkout@v3
-
             - name: test
-              uses: ./.github/test
+              uses: ./.github/workflows/test/my_action
               with:
-                words: "zhe shi yi ge ce shi!"
-            # - name: try again
-            #   uses: ./.github/actions/my_action.yml
-            #   with:
-            #     words: "zhe shi yi ge ce shi!"
+                words: "just a test"
