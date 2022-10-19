@@ -4,6 +4,9 @@ on:
         branches: [ main ]
 jobs:
     a-test:
-        uses: ./.github/workflows/my_action.yml
-        with:
-            words: "zhe shi yi ge ce shi!"
+        runs-on: ubuntu-latest
+        steps:
+            - name: test
+              uses: ./.github/workflows/my_action.yml
+              with:
+                words: "zhe shi yi ge ce shi!"
