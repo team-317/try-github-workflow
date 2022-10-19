@@ -13,8 +13,8 @@ jobs:
 
             - name: test
               uses: ./.github/test
-                with:
-                    words: "zhe shi yi ge ce shi!"
+              with:
+                words: "zhe shi yi ge ce shi!"
             # - name: try again
             #   uses: ./.github/actions/my_action.yml
             #   with:
