@@ -6,6 +6,11 @@ jobs:
     a-test:
         runs-on: ubuntu-latest
         steps:
+
+
+            - name: check out repository
+              uses: actions/checkout@v3
+
             - name: test
               uses: ./.github/workflows/test/my_action
               with:
