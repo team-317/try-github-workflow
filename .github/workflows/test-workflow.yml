@@ -11,8 +11,8 @@ jobs:
             - name: check out repository
               uses: actions/checkout@v3
 
-            # - name: test
-            #   uses: ./.github/actions
+            - name: test
+              uses: ./.github/actions
 
             - name: try again
               uses: ./.github/actions/action.yml
