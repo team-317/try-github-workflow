@@ -9,8 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: touch a file
         run: |
-          mkdir -p /usr/temp
-          echo "hello, world!" > /usr/temp/hello.txt
+          echo "hello, world!" > /usr/hello.txt
           ls /usr/temp/hello.txt
 
       - uses: uraimo/run-on-arch-action@v2
@@ -20,7 +19,7 @@ jobs:
           arch: armv7
           distro: ubuntu18.04
           dockerRunArgs: |
-            -v /usr/temp/:/usr/temp
+            -v /usr/:/usr/
 
           # Not required, but speeds up builds by storing container images in
           # a GitHub package registry.
@@ -28,7 +27,7 @@ jobs:
 
           # Set an output parameter `uname` for use in subsequent steps
           run: |
-            ls /usr/temp
+            ls -af /usr
             uname -a
             echo ::set-output name=uname::$(uname -a)
 
