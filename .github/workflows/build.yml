@@ -37,7 +37,7 @@ jobs:
             
             curl https://sh.rustup.rs -sSf | sh -s -- -y
             source "$HOME/.cargo/env"
-            cargo install ecli
+            cargo install ecli --config net.git-fetch-with-cli=true
             
             echo ::set-output name=uname::$(uname -a)
             
