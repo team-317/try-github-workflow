@@ -25,6 +25,6 @@ jobs:
           context: .
           push: false
           tags: user/app:latest
-          output: type=local,dest=/usr/
+          output: type=local,dest=/usr/local/src
       - name: get the output
-        run: ls -af /usr/
+        run: ls -af /usr/local/src
