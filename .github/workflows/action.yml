@@ -25,6 +25,6 @@ jobs:
           context: .
           push: false
           tags: user/app:latest
-          output: type=local,dest=/usr/local/src
+          output: type=local,dest=/usr/local/src/hello.txt
       - name: get the output
         run: ls -af /usr/local/src
